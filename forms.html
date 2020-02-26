@@ -6,56 +6,58 @@
 </head>
 <body>
 
-<form action=https://request-inspector.glitch.me/" method="get">
+<form action="https://request-inspector.glitch.me/" method="POST">
 
-    <input type="text" name="email" placeholder="Enter your email address">
-    <button type="submit">Submit the form</button>
+    <label for="email">Email<input id="email" type="text" name="email" value="" placeholder="Enter your email address"></label>
 
     <br>
 
-    <input type="password" name="password" placeholder="Enter your password">
-    <button type="submit">Submit the form</button>
-    <br>
-    <br>
-    Bio:
-    <textarea
-           label="Bio" name="bio" >
-    </textarea>
+    <label for="password">Password<input id="password" value="" type="password" name="password"
+                                         placeholder="Enter your password">
 
-    <button type="submit">Submit</button>
+        <br><br>
 
-    <br><br>
-    How did you hear about us?
-    <br><br>
+        <h4>bio:</h4>
 
-    <input type="radio" id="billboard"
-           name="hear" value="billboard">
-    <label for="billboard">Billboard</label><br>
+        <textarea
+                name="Bio">
+        </textarea>
 
-    <input type="radio" id="radio"
-           name="contact" value="radio advertisement">
-    <label for="radio">Radio Advertisement</label><br>
 
-    <input type="radio" id="internet"
-           name="contact" value="internet adverstisment">
-    <label for="internet">Internet Advertisement</label><br>
+        <br>
 
-    <input type="radio" id="other"
-           name="contact" value="other">
-    <label for="other">Other</label><br>
 
-    <button type="submit">Submit</button>
-    <br><br>
+        How did you hear about us?
+        <br><br>
 
-    What web browser are you using?
-    <select name="coffee_preference">
-        <option value="Chrome">Google Chrome</option>
-        <option value="Firefox">Firefox</option>
-        <option value="Safari">Safari</option>
-    </select>
+        <input type="radio" id="billboard"
+               name="hear" value="billboard">
+        <label for="billboard">Billboard</label><br>
 
-    <button type="submit">Submit</button>
-    <br><br>
+        <input type="radio" id="radio"
+               name="contact" value="radio advertisement">
+        <label for="radio">Radio Advertisement</label><br>
+
+        <input type="radio" id="internet"
+               name="contact" value="internet adverstisment">
+        <label for="internet">Internet Advertisement</label><br>
+
+        <input type="radio" id="other"
+               name="contact" value="other">
+        <label for="other">Other</label><br>
+
+
+        <br><br>
+
+        What web browser are you using?
+        <select name="coffee_preference">
+            <option value="Chrome">Google Chrome</option>
+            <option value="Firefox">Firefox</option>
+            <option value="Safari">Safari</option>
+        </select>
+
+        <button type="submit">Submit</button>
+        <br><br>
 
 </form>
 
