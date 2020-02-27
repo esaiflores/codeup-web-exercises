@@ -1,9 +1,30 @@
 .fancy-header-1 {
     text-align: center;
-    color: mediumpurple;
+    color: darkred;
 }
 
 .fancy-header-2 {
     color: darkred;
     text-decoration: underline;
+}
+
+body {
+    background-image: url("https://wallpaperaccess.com/full/640759.jpg");
+
+
+}
+
+ul {
+    list-style: georgian;
+}
+
+#main-content {
+    font-family: Griffy;
+    color: white;
+    font-size: 20px;
+}
+
+footer {
+    color: white;
+    font-family: Friday13;
 }
