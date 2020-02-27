@@ -1,7 +1,9 @@
-.fancy-header {
+.fancy-header-1 {
+    text-align: center;
     color: mediumpurple;
 }
 
 .fancy-header-2 {
     color: darkred;
+    text-decoration: underline;
 }
