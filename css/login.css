@@ -24,7 +24,6 @@ fieldset {
     background-color: white;
     border: 0px;
     padding: 1em;
-    margin: 1em;
     /* There must be 1em between the content and the border of this element */
     /* It should have no border */
     /* Its background should be white */
@@ -41,7 +40,7 @@ fieldset {
 
 .form-group {
     width: 100%;
-    padding: .5em;
+    margin: .5em 0em;
     /* This element must use 100% of the width */
     /* It should have a separation of .5em from elements on top of it and below it*/
 }
@@ -52,10 +51,17 @@ fieldset {
 }
 
 .btn-block {
+    width: 100%;
+
     /* This element should use 100% of the width */
 }
 
 .btn {
+    color: white;
+    font-weight: bold;
+    border:1px lightgrey;
+    padding: 8px;
+
     /* There must be a separation of 8px between the text and the border of this element */
     /* The text color of this element should be white and bold */
     /* The border of this element should be 1px, and its color should be light grey */
@@ -63,6 +69,10 @@ fieldset {
 }
 
 .form-control {
+    padding: 4px 0px;
+    margin: .5em;
+    width: calc(100% - 8px);
+
     /* There must be 4px on top of the text and below the text of an input with this class */
     /* It should have a separation of .5em from elements on top of it and below it */
 
@@ -70,7 +80,7 @@ fieldset {
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Calculate based on the padding of the `.btn` class */
     /* HINT: Examples are available at: https://glitch.com/~input-button-width */
-    width: 100%;
+
 }
 
 
