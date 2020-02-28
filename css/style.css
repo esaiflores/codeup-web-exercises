@@ -30,3 +30,16 @@ footer {
     font-family: "Star Jedi";
     text-align: center;
 }
+
+.fancy-header-3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+table {
+    text-align: center;
+    margin: 50px auto;
+    width: 500px;
+    padding: 10px;
+    color: yellow;
+}
