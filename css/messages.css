@@ -1,0 +1,75 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+
+}
+div {
+    position: relative;
+    animation-duration: 4s;
+    animation-name: example;
+    animation-iteration-count: infinite;
+
+}
+
+
+@keyframes example {
+    0% {
+        background-color: #cddeff;
+    }
+    25% {
+        background-color: #cff3da;
+    }
+    50% {
+        background-color: #fcfac9;
+    }
+    75% {
+        background-color: #fad2d7;
+    }
+    100% {
+        background-color: #cddeff;
+    }
+}
+
+.message-message-info {
+    padding: .5em;
+    margin: .5em auto;
+    border: 1px lightgrey solid;
+    width: 45%;
+    color: #362d92;
+    border-radius: 7px;
+    background-color: #cddeff;
+}
+
+
+.message-message-success {
+    padding: .5em;
+    margin: .5em auto;
+    border: 1px lightgrey solid;
+    width: 45%;
+    color: #1d7642;
+    border-radius: 7px;
+    background-color: #cff3da
+}
+
+.message-message-warning {
+    padding: .5em;
+    margin: .5em auto;
+    border: 1px lightgrey solid;
+    width: 45%;
+    color: #a19137;
+    border-radius: 7px;
+    background-color: #fcfac9
+}
+
+.message-message-error {
+    padding: .5em;
+    margin: .5em auto;
+    border: 1px lightgrey solid;
+    width: 45%;
+    color: #7f122e;
+    border-radius: 7px;
+    background-color: #fad2d7
+}
