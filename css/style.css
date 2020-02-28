@@ -1,15 +1,16 @@
 .fancy-header-1 {
     text-align: center;
-    color: darkred;
+    color: yellow;
 }
 
 .fancy-header-2 {
-    color: darkred;
+    color: white;
     text-decoration: underline;
 }
 
 body {
     background-image: url("https://wallpaperaccess.com/full/640759.jpg");
+    background-attachment: fixed;
 
 
 }
@@ -19,12 +20,13 @@ ul {
 }
 
 #main-content {
-    font-family: Griffy;
+    font-family: "Star Jedi";
     color: white;
     font-size: 20px;
 }
 
 footer {
     color: white;
-    font-family: Friday13;
+    font-family: "Star Jedi";
+    text-align: center;
 }
