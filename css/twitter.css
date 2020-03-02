@@ -1,4 +1,4 @@
-root {
+:root {
     --main-bg: #E6ECF0;
     --link-color: #3B94D9;
     --main-link-color: #848487;
@@ -25,17 +25,16 @@ header {
 a {
     color: var(--link-color);
 }
-
 .top-nav {
     background: var(--light-bg);
     position: fixed;
     width: 100%;
-    z-index: 2000;
+    z-index: 1000;
 }
 .nav {
     list-style-type: none;
+    padding: 0;
     margin: 0;
-
 }
 .nav-link {
     color: var(--main-link-color);
@@ -49,6 +48,18 @@ a {
     background: var(--light-bg);
     height: 80px;
 }
+
+.profile-image {
+    position: absolute;
+    top: 210px
+}
+
+.profile-form {
+    float: right;
+    line-height: 80px;
+}
+
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
@@ -72,37 +83,59 @@ a {
     color: var(--main-link-color);
 }
 
-.profile-image {
-    position: absolute;
-    top: 300px;
-    left: 10px;
-}
-
-.profile-form {
-    line-height: 211px;
-    float: right;
-}
-
-.profile-details {
-    width: 25%;
-    margin: 0 .5em;
-}
-
-.timeline {
-    width: 50%;
-    margin: 0 .5em;
-}
-
-.who-to-follow {
-    width: 25%;
-    margin: 0 .5em;
-}
-
-.container {
-    padding: 0 2em;
-}
-
 .nav-item {
     display: inline-block;
     padding: 1.5em;
+}
+
+
+.profile-details{
+    float: left;
+    margin: 0 .5em;
+    width: calc(25% - 1em )
+}
+
+.timeline {
+    float: left;
+    margin: 0 .5em;
+    width: calc(50% - 1em);
+
+}
+
+.who-to-follow {
+    float: left;
+    margin: 0 .5em;
+    width: calc(25% - 1em);
+}
+
+.container {
+    padding: 2em;
+}
+
+.media {
+    width: 100%;
+    background-color: var(--light-bg);
+    border-bottom: 1px var(--separator-color) solid;
+    padding: .5em;
+    overflow: auto;
+}
+
+.media-image {
+    width: 50px;
+    float: left;
+    margin-top: 1.33em;
+}
+
+.media-body {
+    width: calc(100% - 50px);
+    float: right;
+}
+
+.profile-items {
+    padding: 0;
+}
+
+.profile-entry {
+    list-style: none;
+    margin: .5em;
 }
