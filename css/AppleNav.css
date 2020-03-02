@@ -1,0 +1,20 @@
+:root {
+    --nav-apple: #929394
+}
+
+* {
+    box-sizing: border-box;
+}
+body, html {
+    background-color: var(--main-bg);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+header {
+    background-image: url("https://loremflickr.com/1200/300");
+    background-size: cover;
+    min-height: 300px;
+    padding-top: 275px;
