@@ -4,32 +4,52 @@
 body {
     margin: 0;
 }
+
 nav {
-    background: #333333;
+    background-color: #c1c1c1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
 }
-ul {
-    list-style: none;
+
+header nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+header nav a:hover {
+    color: blue;
+    background: #bbbbbb
+}
+
+header nav ul {
     padding: 0;
     margin: 0;
-    display: flex; /* made unordered list a flex container */
-}
-nav a {
-    text-decoration: none;
-    color: white;
-    font-family: Verdana;
+    list-style: none;
     display: flex;
-    margin: 1em;
-}
-nav a:hover {
-    background: blue;
-}
-nav ul li:nth-child(5) {
-
-    margin-left: auto;
-    font-size: 20px;
+    justify-content: center;
+    flex: 1;
 }
 
-nav ul li:nth-child(6) {
+header nav .nav-bar-logo {
+    font-size: 2em;
+    padding: .2em 0;
 
-    margin-left: auto;
+
+}
+
+header nav .nav-bar-left {
+    justify-content: flex-start;
+}
+
+header nav .nav-bar-right {
+    justify-content: flex-end;
+}
+
+.nav-bar-logo a {
+    padding: 0;
 }
