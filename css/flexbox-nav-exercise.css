@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+nav {
+    background: #333333;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* made unordered list a flex container */
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: Verdana;
+    display: flex;
+    margin: 1em;
+}
+nav a:hover {
+    background: blue;
+}
+nav ul li:nth-child(5) {
+
+    margin-left: auto;
+    font-size: 20px;
+}
+
+nav ul li:nth-child(6) {
+
+    margin-left: auto;
+}
