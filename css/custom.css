@@ -1,0 +1,23 @@
+.jumbotron {
+    background-image: url("https://java.codeup.com/examples/bootstrap/pizza.png");
+
+
+}
+
+h1  {
+    background-color: #FFFFFF;
+    opacity: 60%;
+    text-align: center;
+}
+
+.card-body {
+    margin: auto;
+}
+
+.card-header {
+    border: 1px solid lightgrey;
+}
+
+.list-group {
+    border: 1px solid lightgrey;
+}
