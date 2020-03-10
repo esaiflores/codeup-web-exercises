@@ -13,7 +13,6 @@ main {
     grid-template-columns: 20% 50% 30%;
     grid-template-rows: 1fr 50%;
     grid-template-areas:
-                "nav-top"
 
     width: 800px;
     height: 400px;
