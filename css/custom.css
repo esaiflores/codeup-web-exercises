@@ -1,8 +1,12 @@
 .jumbotron {
-    background-image: url("https://java.codeup.com/examples/bootstrap/pizza.png");
+    background-image: url("../imgs/pizza.png");
 
 
 }
+ .navbar-nav {
+     align-items: center;
+
+ }
 
 h1  {
     background-color: #FFFFFF;
