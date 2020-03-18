@@ -1,5 +1,6 @@
 "use strict";
 
+console.log('Functions js File');
 /**
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
