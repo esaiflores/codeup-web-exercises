@@ -194,29 +194,36 @@ alert(result);
  * return value.
  */
 
+
 function calculateTotal(luckyNumber, totalAmount) {
 
-    var discountPercent;
-    if(luckyNumber === 0){
-        discountPercent = 0;
-    }else if (luckyNumber === 1){
-        discountPercent = .10;
+    var discount;
+
+    if(luckyNumber === 0) {
+        discount = 0;
+    }else if(luckyNumber === 1) {
+        discount = .10;
     }else if (luckyNumber === 2){
-        discountPercent = .25;
+        discount = .25;
     }else if (luckyNumber === 3){
-        discountPercent = .35;
+        discount = .35;
     }else if (luckyNumber === 4) {
-        discountPercent = .50;
+        discount = .50;
     }else if (luckyNumber === 5){
-        discountPercent = 1;
+        discount = 1;
     }else {
-        discountPercent = 0;
+        discount = 0;
     }
 
-    var discountAmount = totalAmount * discountPercent;
+    var discountAmount = totalAmount * discount;
     return totalAmount - discountAmount;
 
 }
+
+console.log(calculateTotal(4, 100),50);
+
+
+
 
 console.log(calculateTotal(4, 100),50);
 
