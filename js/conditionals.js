@@ -194,25 +194,23 @@ alert(result);
  * return value.
  */
 
-
 function calculateTotal(luckyNumber, totalAmount) {
 
-    var discount;
-
-    if(luckyNumber === 0) {
-        discount = 0;
-    }else if(luckyNumber === 1) {
-        discount = .1
+    var discountPercent;
+    if(luckyNumber === 0){
+        discountPercent = 0;
+    }else if (luckyNumber === 1){
+        discountPercent = .10;
     }else if (luckyNumber === 2){
-        discount = .25;
+        discountPercent = .25;
     }else if (luckyNumber === 3){
-        discount = .35;
+        discountPercent = .35;
     }else if (luckyNumber === 4) {
-        discount = .50;
+        discountPercent = .50;
     }else if (luckyNumber === 5){
-        discount = 1;
+        discountPercent = 1;
     }else {
-        discount = 0;
+        discountPercent = 0;
     }
 
     var discountAmount = totalAmount * discountPercent;
@@ -221,7 +219,6 @@ function calculateTotal(luckyNumber, totalAmount) {
 }
 
 console.log(calculateTotal(4, 100),50);
-
 
 
 
@@ -237,9 +234,10 @@ console.log(calculateTotal(4, 100),50);
 
 
 var luckyNumber = Math.floor(Math.random() * 6);
+
 var whatIsTheTotal = +prompt('Enter total bill');
-var CalculatorMachine = calculateTotal(luckyNumberGen, whatIsYourTotal);
-alert("Your lucky number is " + luckyNumberGen);
-alert ("Your initial price before discount is " + whatIsYourTotal);
+var CalculatorMachine = calculateTotal(luckyNumber, whatIsTheTotal);
+alert("Your lucky number is " + luckyNumber);
+alert ("Your initial price before discount is " + whatIsTheTotal);
 alert('Your final price is ' + CalculatorMachine);
 
