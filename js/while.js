@@ -1,3 +1,4 @@
+"use strict";
 
 var i = 2;
 while (i <= 65536){
@@ -27,3 +28,4 @@ do {
 
 } while (allCones >= 0);
 console.log('Yay! I sold them all ! ');
+
