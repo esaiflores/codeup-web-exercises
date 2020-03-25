@@ -62,4 +62,22 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+    function first(array) {
+        return array[0];
+    }
+
+    var numbers = [1, 2, 3, 4, 5];
+    var result = first(numbers);
+    console.log('first test',result === 1 );
+
+
+    function second(array) {
+        return array[1];
+    }
+
+    var numbers = [1, 2, 3, 4, 5];
+    var result = second(numbers);
+    console.log('second test',result === 2 );
+
+
 })();
