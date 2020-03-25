@@ -13,16 +13,16 @@ var allCones = Math.floor(Math.random() * 50) + 50;
 Math.floor(Math.random() * 5) + 1;
 
 console.log(allCones);
-console.log(customerCones);
+console.log(conesToPurchase);
 
 do {
-    customerCones = Math.floor(Math.random() * 5) + 1;
+    var conesToPurchase = Math.floor(Math.random() * 5) + 1;
 
-    if (customerCones > allCones) {
-        console.log("I cannot sell you " + customerCones + " because I only have " + allCones);
+    if (conesToPurchase > allCones) {
+        console.log("I cannot sell you " + conesToPurchase + " because I only have " + allCones);
     } else {
-        console.log('I can sell you  ' + customerCones + " because i have " + allCones);
-        allCones -= customerCones;
+        console.log('I can sell you  ' + conesToPurchase + " because i have " + allCones);
+        allCones -= conesToPurchase;
     }
 
 
