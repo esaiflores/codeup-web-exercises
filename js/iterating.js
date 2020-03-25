@@ -43,6 +43,11 @@
      * Refactor your above code to use a `forEach` loop
      */
 
+    names.forEach(function (name) {
+        console.log('Here is each name: ' + name + '!');
+
+    });
+
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
