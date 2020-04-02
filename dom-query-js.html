@@ -25,6 +25,8 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+
+
 <script>
     (function() {
         "use strict";
@@ -44,16 +46,46 @@
 
         // TODO: Set the text color of subHeader to blue
 
+        document.getElementById("changeH2").addEventListener("click", changeH2Color, false);
+        function changeH2Color () {
+            subHeader.style.color = "blue";
+        }
+
         // TODO: Uncomment the next line and get all list items
-        // var listItems = ;
+        var listItems = document.getElementsByTagName('li');
+        console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
 
+        document.getElementById("changeli").addEventListener("click", changeLiColors, false);
+
+        function changeLiColors () {
+            for (var i = 0; i < listItems.length; i++) {
+
+                var dbidValue = listItems[i].getAttribute("data-dbid");
+                console.log(dbidValue);
+                if (dbidValue === "1") {
+                    listItems[i].style.color = "blue";
+
+                } else if (i % 2 === 0) {
+                    listItems[i].style.color = "gray";
+                }
+            }
+        }
+
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        // var subParagraphs = ;
+        var subParagraphs = document.getElementsByClassName("sub-paragraph");
+        console.log(subParagraphs);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+
+
+        document.getElementById("changetext").addEventListener("click", changeParText, false);
+
+        function changeParText () {
+            subParagraphs[0].innerText = "Mission Accomplished!";
+        }
     })();
 </script>
 </body>
