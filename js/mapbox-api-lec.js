@@ -2,7 +2,7 @@
  * 			SETTING UP KEYS.JS
  *********************************************/
 // TODO TOGETHER: Open .gitignore and add keys.js. Add keys.js file and import to mapbox html file. Your api keys are stored in keys.js and are added to the .gitignore so they are protected
-
+console.log('token ' + mapBoxToken)
 /**********************************************
  * 			CUSTOMIZING THE MAP
  *********************************************/
@@ -14,12 +14,29 @@
 
 //TODO TOGETHER: Set map to Dallas area using the coordinates [-96.8057, 32.7787]
 
-
+mapboxgl.accessToken = mapBoxToken;
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9' ,
+    center: [-98.4916, 29.4252] ,
+    zoom: 18
+});
 
 
 
 
 //TODO: Experiment with different map styles, zoom levels, and centers. You will need to reference the mapbox docs. (~15 minutes)
+
+
+
+mapboxgl.accessToken = mapBoxToken;
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9' ,
+    center: [-96.8084, 32.7799] ,
+    zoom: 18
+});
+
 
 
 /**********************************************
@@ -34,6 +51,15 @@
 // TODO TOGETHER: Change the color of the marker
 
 
+    var markerOptions = {
+        color: 'purple',
+        draggable: true
+
+};
+
+var marker = new mapboxgl.Marker(markerOptions)
+    .setLngLat([-96.8084, 32.7799])
+    .addTo(map);
 
 
 
@@ -51,8 +77,17 @@
 
 // TODO TOGETHER: Add a popup to the map over codeup. Set the html as a paragraph that says "Codeup Rocks!"
 
+var popup = new mapboxgl.Popup()
+    .setHTML("<h1>Codeup Rocks!</h1>")
+    .addTo(map);
 
+marker.setPopup(popup);
 
+var popMuseum = new mapboxgl.Popup()
+    .setHTML("<h1>sixth Floor Museum!</h1>")
+    .addTo(map);
+
+mak
 
 // TODO TOGETHER: Comment out the popup we just added. Add a popup to the Sixth Floor Musume marker.
 

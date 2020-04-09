@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Exercises</title>
+</head>
+<body>
+
+<header id="heading">
+    <h1 class="intro">Intro to some JQuery</h1>
+</header>
+
+<main>
+    <div id="intro" class="text">
+        <p>
+            Gonna learn some JQuery and how it'll be easier than using plain vanilla javascript. To first learn the
+            JQuery we have to first learn the plain vanilla javascript. To understand that we will have to first learn
+            about the origins of vanilla.
+        </p>
+    </div>
+</main>
+
+<header class="vanilla" id="vanilla-facts">
+    <h2>
+        Tales of Vanilla or more commonly Nilla!
+    </h2>
+</header>
+
+<ul class="vanilla">
+    <li>Vanilla is derived from vainilla, the diminutive of the Spanish word vaina</li>
+    <li>Vanilla only grows only 10-20° North or South of the Equator.</li>
+    <li>Vanilla ice cream is white</li>
+</ul>
+
+<section id="footer" class="vanilla">
+<p>
+    The more you know ;)
+</p>
+</section>
+
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    $(document).ready(function () {
+        alert('The DOM has finished loading!');
+
+        alert($('#heading').html());
+
+        $('.intro').css('border', 'solid 1px red');
+
+        $('li').css('font-size', '20px');
+
+        $('li').css('background-color', 'red');
+
+        $('h1').css('background-color', 'blue');
+
+        $('p').css('background-color', 'green');
+
+        $('li, h1, p').css('background-color', 'red');
+
+        alert($('h1').html());
+
+
+    });
+
+
+
+
+
+
+</script>
+</body>
+</html>
