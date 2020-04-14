@@ -49,7 +49,26 @@
     <dt>Are national parks cool?</dt>
     <dd>Do farts smell?</dd>
 
+    <h3>Jurassic National Park</h3>
+    <ul>
+        <li>A dinosaur park</li>
+        <li>Founded in the 90's</li>
+        <li>Over 3000 acres</li>
+        <li>Tickets are super expensive</li>
+    </ul>
+
+    <h3>Disney World National Park</h3>
+    <ul>
+        <li>Park based on all things Disney</li>
+        <li>Like Disney World, but 10 times better</li>
+        <li>Based on the moon</li>
+        <li>Tickets are expensive</li>
+    </ul>
+
 </dl>
+
+
+<button class="button" type="button">Dont Push Me!</button>
 
 <script src="js/jquery.js"> </script>
 
@@ -69,6 +88,25 @@
                 // event.preventDefault();
                 $("dd").toggleClass('invisible');
             });
+
+    $('.button').click(function (){
+        $('ul').each(function(){
+            $(this).children().last().css('background-color', 'yellow');
+        });
+
+        $('h3').click(function(){
+            $(this).next().children().css('font-weight', 'bold');
+        });
+
+        $('li').click(function(){
+            $(this).parent().children().first().css('color','blue');
+
+        });
+
+    });
+
+
+
 
 
 
