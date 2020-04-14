@@ -14,6 +14,11 @@
 </head>
 <body>
 
+<div id="news-letter">
+    <h1>Would you like to sign up for our newsletter?</h1>
+    <span class="x"><strong>X</strong></span>
+</div>
+
 <a href="#" id="display-dd">Reveal Answers</a>
 
 <p>10 FAQs about National Parks (:</p>
@@ -101,6 +106,10 @@
         $('li').click(function(){
             $(this).parent().children().first().css('color','blue');
 
+        });
+
+     $('.x').click(function () {
+         $('#news-letter').hide();
         });
 
     });
