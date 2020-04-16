@@ -7,6 +7,10 @@
 <body>
 
 
+
+
+
+
 <script src="js/jquery.js"></script>
 <script src="js/keys.js"></script>
 
@@ -14,10 +18,30 @@
     "use strict";
     $(document).ready(function () {
 
-        $.get("http://api.openweathermap.org/data/2.5/weather", {
-            APPID: WEATHER_MAP_KEY,
-            q:     "San Antonio, US"
-        });
+        $.get("http://api.openweathermap.org/data/2.5/forecast", {
+                "APPID": WEATHER_MAP_KEY,
+                "q":     "Dallas, US",
+                "units": "imperial"
+            }).done(function(data){
+                console.log(data);
+            }).fail(function(errors){
+                console.error(errors);
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     });
 
 
