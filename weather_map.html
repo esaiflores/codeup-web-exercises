@@ -126,13 +126,13 @@
             console.log(data);
             console.log(data.daily.dt);
 
-            var dailyDate = {};
+
 
 
 
 
             for (var i = 0; i < 5; i++) {
-                dailyDate = (data.daily[i].dt) * 1000;
+                var dailyDate = (data.daily[i].dt) * 1000;
                 var newDate = new Date((dailyDate));
                 var finalDate = newDate.toDateString();
                 $('#date').text(finalDate);
