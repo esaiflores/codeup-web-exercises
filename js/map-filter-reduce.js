@@ -36,11 +36,23 @@ const users = [
     }
 ];
 
+//First Part
 
 let newLanguages = users.filter(user => user.languages.length >= 3);
 
 console.log(newLanguages);
 
+//Second Part
+
 let userEmails = users.map(user => `${user.email}`);
 
 console.log(userEmails);
+
+//Third Part
+
+let totalYearsExp = users.reduce((total, user)=> {
+    return total + user.yearsOfExperience / users.length;
+
+}, 0);
+
+console.log(totalYearsExp);
