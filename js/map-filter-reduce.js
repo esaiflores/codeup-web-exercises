@@ -56,3 +56,17 @@ let totalYearsExp = users.reduce((total, user)=> {
 }, 0);
 
 console.log(totalYearsExp);
+
+//Fourth Part
+
+let longestUserEmail = users.reduce((longestEmail, user) => {
+    if(user.email.length >= longestEmail.length){
+        longestEmail = user.email;
+    }
+    return longestEmail;
+
+},"");
+
+console.log(longestUserEmail);
+
+//Fifth Part
