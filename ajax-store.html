@@ -30,6 +30,31 @@
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
+
+    function refreshPage() {
+        $.ajax('./data/inventory.json').done(function(data) {
+            $('#insertProducts').html(addTableBody(data));
+
+        });
+
+    }
+    function addTableBody (data) {
+        var html = "";
+
+        data.forEach(function (inventory) {
+
+            html += "<tr>";
+            html += "<td>" + inventory.title + "</td>";
+            html += "<td>" + inventory.quantity + "</td>";
+            html += "<td>" + inventory.price + "</td>";
+            html += "<td>" + inventory.categories + "</td>";
+            html += "</tr>";
+        });
+        return html;
+    }
+
+    $('.refresh').click(refreshPage);
+
 })();
 </script>
 
