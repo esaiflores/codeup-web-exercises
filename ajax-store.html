@@ -7,83 +7,53 @@
 
 <h1>My Tool Store</h1>
 
-<table id="products">
+<table id="products" border="1">
     <thead>
-        <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
-        </tr>
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<script src="js/jquery.js"></script>
->>>>>>> ajax-store
-=======
+<button id="update-btn">Update table</button>
 
->>>>>>> 4c0b657e55687c1ed6470b0fa57e3a07edd70da2
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script>
-(function() {
     "use strict";
-    // TODO: Create an ajax GET request for /data/inventory.json
+    (function() {
+        let url = "data/inventory.json";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
+        getInfo();
 
-    function refreshPage() {
-        $.ajax('./data/inventory.json').done(function(data) {
-            $('#insertProducts').html(addTableBody(data));
+        function renderHTML(toolsArray){
+            let HTML = "";
+            $("#insertProducts").empty(); // clean up your structure
 
-        });
+            toolsArray.forEach( tool => {
+                HTML = `<tr>
+                            <td>${tool.title}</td>
+                            <td>${tool.quantity}</td>
+                            <td>$${tool.price}</td>
+                            <td>${tool.categories}</td>
+                        </tr>`;
+                $("#insertProducts").append(HTML);
+            });
+        }
 
-=======
-    function refreshPage() {
-        $.ajax('./data/inventory.json').done(function(data) {
-            $('#insertProducts').html(addTableBody(data));
-        });
+        function getInfo(){
+            $.get(url)
+                .done( data => renderHTML(data) )
+                .fail( error => console.error(error) );
+        }
 
+        $("#update-btn").click( () => getInfo());
 
-
-        // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
-=======
-
-
->>>>>>> 4c0b657e55687c1ed6470b0fa57e3a07edd70da2
-
->>>>>>> ajax-store
-    }
-    function addTableBody (data) {
-        var html = "";
-
-        data.forEach(function (inventory) {
-
-            html += "<tr>";
-            html += "<td>" + inventory.title + "</td>";
-            html += "<td>" + inventory.quantity + "</td>";
-            html += "<td>" + inventory.price + "</td>";
-            html += "<td>" + inventory.categories + "</td>";
-            html += "</tr>";
-        });
-        return html;
-    }
-
-    $('.refresh').click(refreshPage);
-
-})();
+    })();
 </script>
 
 </body>
