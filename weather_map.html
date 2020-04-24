@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+
+<!--Navbar-->
+<nav class="navbar navbar-dark bg-primary">
+    <span class="navbar-brand mb-0 h1">Weather App</span>
+</nav>
+
+<br>
+
+<form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+</form>
+
+<!--Break Here-->
+<br>
+<!--Insert Cards Bootstrap-->
+<div class="card-deck">
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            Featured
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            Featured
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            Featured
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            Featured
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <div id="date" class="card-header">
+            Featured
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </div>
+</div>
+
+
+<!---->
+
+
+
+<p id="max"></p>
+<p id="min"></p>
+<img id="icon" alt="weather icon">
+
+<ul>
+    <li id="description"></li>
+    <li id="humidity"></li>
+    <li id="wind"></li>
+    <li id="pressure"></li>
+    <li id="pressure2"></li>
+</ul>
+
+<!---->
+
+<h6 id="date2"></h6>
+
+<ul>
+    <li id="description1"></li>
+</ul>
+
+<script src="js/jquery.js"></script>
+<script src="js/keys.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+<script>
+    "use strict";
+    $(document).ready(function () {
+
+        $.get("https://api.openweathermap.org/data/2.5/onecall", {
+            "APPID": WEATHER_MAP_KEY,
+            "lat": 32.7767,
+            "lon": -96.78,
+            "units": "imperial"
+        }).done(function (data) {
+
+            console.log(data);
+            console.log(data.daily.dt);
+
+
+
+
+
+
+            for (var i = 0; i < 5; i++) {
+                var dailyDate = (data.daily[i].dt) * 1000;
+                var newDate = new Date((dailyDate));
+                var finalDate = newDate.toDateString();
+                $('#date').text(finalDate);
+
+                // $("#date").text(extractDate);
+                console.log(newDate.toDateString())
+
+
+                var maxTemp = dailyDate.temp.max;
+                $("#max").text(maxTemp);
+
+                var minTemp = dailyDate.temp.min;
+                $("#min").text(minTemp);
+
+
+                var description1 = dailyDate.weather[0].description;
+                $("#description").text(description1);
+
+                var humidity1 = dailyDate.humidity;
+                $("#humidity").text(humidity1);
+
+                var wind1 = dailyDate.wind_speed;
+                $("#wind").text(wind1);
+
+                var pressure1 = dailyDate.pressure;
+                $("#pressure").text(pressure1);
+
+                // ----------
+
+
+            }
+        }).fail(function (errors) {
+            console.error(errors);
+        });
+    });
+
+
+
+
+
+
+</script>
+</body>
+</html>
